@@ -164,16 +164,16 @@
 
   <script>
     function generateVCard() {
-      // Configure aqui seus dados cadastrais exatos
+      // Configurações de contato
       const contactData = {
         name: "Dr. Tulio Brandão Xavier-Rocha",
         firstName: "Tulio",
         lastName: "Brandão Xavier-Rocha",
         org: "Consultoria em Biomecânica",
         title: "Consultor em Biomecânica",
-        phone: "+5538999343321", // Coloque seu DDI + DDD + Número
-        email: "tuliofisiomec@gmail.com",
-        url: "https://seusite.com.br"
+        phone: "+5500000000000", // Coloque seu número com DDI e DDD
+        email: "seuemail@dominio.com",
+        url: "https://tbxavierrocha.github.io/CartaoVisitaConsult/"
       };
 
       const vcard = [
@@ -189,13 +189,17 @@
         "END:VCARD"
       ].join("\r\n");
 
-      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8;" });
+      // MIME-type otimizado para reconhecimento de agenda móvel
+      const blob = new Blob([vcard], { type: "text/x-vcard;charset=utf-8;" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.setAttribute("download", `${contactData.firstName}_Contato.vcf`);
+      link.setAttribute("download", "Tulio_Xavier_Rocha.vcf");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+
+      // Mensagem de instrução imediata para o usuário
+      alert("Arquivo de contato baixado!\n\nToque na notificação de download do seu aparelho para abrir e confirmar o salvamento na sua agenda.");
     }
   </script>
 </body>
