@@ -6,7 +6,7 @@
   <title>Serviços & Consultoria | Dr. Tulio Brandão Xavier-Rocha</title>
   <style>
     :root {
-      --bg: #0b1322;
+      --bg: #0f172a;
       --card-bg: #142238;
       --card-border: rgba(255, 255, 255, 0.08);
       --accent: #f97316;
@@ -16,10 +16,13 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 0 16px 60px 16px; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px 16px 60px 16px; }
     .container { max-width: 680px; margin: 0 auto; }
 
-    header { padding: 40px 0 24px; text-align: center; }
+    .nav-back { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; margin-bottom: 10px; font-weight: 500; }
+    .nav-back:hover { color: var(--text); }
+
+    header { padding: 20px 0 24px; text-align: center; }
     .logo-badge { display: inline-block; background: rgba(249, 115, 22, 0.1); color: var(--accent); font-weight: 700; font-size: 0.8rem; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; border: 1px solid rgba(249, 115, 22, 0.3); }
     h1 { font-size: 1.8rem; line-height: 1.25; margin-bottom: 12px; font-weight: 800; }
     header p { color: var(--text-muted); font-size: 1rem; }
@@ -87,6 +90,8 @@
 <body>
 
   <div class="container">
+    <a href="Cartao_Virtual_QR.html" class="nav-back">← Voltar ao cartão</a>
+
     <header>
       <div class="logo-badge">CONSULTORIA TÉCNICO-CIENTÍFICA</div>
       <h1>Dr. Tulio Brandão Xavier-Rocha</h1>
@@ -106,7 +111,6 @@
         <li><span>✓</span> <strong>Diretrizes práticas de reprogramação:</strong> Ajustes de set-up mecânico e estratégias corretivas personalizadas.</li>
       </ul>
 
-      <!-- Substitua o número de WhatsApp pelo seu telefone com DDD -->
       <a class="btn-cta" href="https://wa.me/5538999343321?text=Olá,%20Dr.%20Tulio.%20Gostaria%20de%20saber%20mais%20sobre%20o%20agendamento%20da%20Avaliação%20Bio-X." target="_blank" rel="noopener">
         Agendar Avaliação Bio-X no WhatsApp
       </a>
