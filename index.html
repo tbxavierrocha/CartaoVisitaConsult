@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Tulio Brandão Xavier-Rocha | Contato</title>
+  <title>Dr. Tulio Brandão Xavier-Rocha | Cartão Virtual</title>
   <style>
     :root {
       --bg-color: #0f172a;
@@ -128,10 +128,9 @@
   <div class="container">
     <!-- Visualização do Cartão -->
     <div class="business-card" id="card">
-      <!-- Substitua src pelo link do seu arquivo SVG ou PNG da logo -->
       <img class="logo-symbol" src="ABNI_Logo.png" alt="Símbolo Biomecânica" onerror="this.style.display='none'">
       <h1 class="name">Dr. Tulio Brandão Xavier-Rocha</h1>
-      <p class="title">Consultoria em biomecânica</p>
+      <p class="title">Consultoria em Biomecânica</p>
     </div>
 
     <!-- Links e Ações -->
@@ -147,13 +146,14 @@
         Conversar no WhatsApp
       </a>
 
-      <!-- Landing Page / Site -->
+      <!-- Landing Page / Serviços -->
       <a class="btn btn-secondary" href="Cardapio.html">
         Serviços e Consultoria
       </a>
+      
       <!-- Currículo Lattes / Acadêmico -->
-      <a class="btn btn-secondary" href="http://lattes.cnpq.br/" target="_blank" rel="noopener">
-        Currículo
+      <a class="btn btn-secondary" href="http://lattes.cnpq.br/0791553640600604" target="_blank" rel="noopener">
+        Currículo Lattes
       </a>
     </div>
 
@@ -164,16 +164,15 @@
 
   <script>
     function generateVCard() {
-      // Configurações de contato
       const contactData = {
         name: "Dr. Tulio Brandão Xavier-Rocha",
         firstName: "Tulio",
         lastName: "Brandão Xavier-Rocha",
         org: "Consultoria em Biomecânica",
         title: "Consultor em Biomecânica",
-        phone: "+5538999343321", // Coloque seu número com DDI e DDD
+        phone: "+5538999343321",
         email: "tuliofisiomec@gmail.com",
-        url: "https://tbxavierrocha.github.io/CartaoVisitaConsult/"
+        url: "https://seusite.com.br"
       };
 
       const vcard = [
@@ -189,18 +188,16 @@
         "END:VCARD"
       ].join("\r\n");
 
-      // MIME-type otimizado para reconhecimento de agenda móvel
-      const blob = new Blob([vcard], { type: "text/x-vcard;charset=utf-8;" });
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8;" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.setAttribute("download", "Tulio_Xavier_Rocha.vcf");
+      link.setAttribute("download", `${contactData.firstName}_Contato.vcf`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-
-      // Mensagem de instrução imediata para o usuário
-      alert("Arquivo de contato baixado!\n\nToque na notificação de download do seu aparelho para abrir e confirmar o salvamento na sua agenda.");
     }
   </script>
+</body>
+</html>
 </body>
 </html>
